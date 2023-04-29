@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<title>Petal</title>	
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	
+<style>
+	
+	
+
+	
+body {
+  margin-left: 20px;
+  min-width: 250px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+	
+.header {
+  background-color: #E5EEF5;
+	padding-bottom: 40px;
+  
+
+}
+
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+input {
+  margin: 0;
+  border: none;
+  
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+
+.addBtn {
+  background: #FF595E;
+  color: white;
+	
+  margin-top: 333px;
+  padding: 12px;
+	padding-right: 60px;
+	padding-left: 60px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+	width: 400px;
+	
+}
+	p { 
+	color: black;
+	}
+	
+	#flower {
+		background-color: #E5EEF5;
+	}
+	
+	.output{
+		display: grid;
+  		grid-template-columns: auto auto auto auto;
+		padding: 10px;
+		background-color: #FAFAFA;
+	}
+
+	.grid-item{
+		
+	}
+</style>
+</head>
+<body>
+
+
+	
+<div class="row">
+	<div class="col-4" id="flower">
+		<br>
+		<p> Add a petal to your flower!</p>
+<div id="inputheader" class="header">
+	
+	<p>Enter your name</p>
+  <input type="text" id="listitem" placeholder="name">
+	<p>Enter the software</p>
+	<input type="text" id="software" placeholder="software">
+	<p>Enter your team</p>
+	<input type="text" id="team" placeholder="team">
+	<p>Enter your role</p>
+	<input type="text" id="role" placeholder="role">
+	
+	<br>
+	<br>
+	<br>
+	<span onclick="newElement()" class="addBtn">Submit </span>
+	
+  </div>
+		</div>
+	
+	<div class="col-8">
+		
+		
+			<div class="output">
+				
+				<div id="nameoutputdiv" class="griditem"><span id="nameoutput"></span></div>
+					
+				<div id="softwareoutputdiv" class="griditem"><span id="softwareoutput"></span></div>
+				
+				<div id="teamoutputdiv" class="griditem"><span id="teamoutput"></span></div>
+				
+				<div id="roleoutputdiv" class="griditem"><span id="roleoutput"></span></div>
+				</div>
+			
+		</div>
+		
+	
+</div>
+<script>
+	
+
+function newElement() {
+  var li = document.createElement("li");
+	
+  var inputValue = document.getElementById("listitem").value;
+	var team = document.getElementById("team").value;
+	var software =  document.getElementById("software").value;
+	var role =  document.getElementById("role").value;
+	
+	document.getElementById('nameoutput').innerHTML = 'Name' +  "<br>" + inputValue;
+	document.getElementById('teamoutput').innerHTML = 'Team' +   "<br>" + team;
+	document.getElementById('softwareoutput').innerHTML = 'Software:' +   "<br>" +  software;
+	document.getElementById('roleoutput').innerHTML = 'Role:' +   "<br>" + role;
+	
+	
+}
+	
+	
+	
+</script>
+
+</body>
+</html>
